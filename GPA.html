@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        GPA Calculator
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gpastyles.css">
+</head>
+<body>
+  <div class="divider">
+    <div class="left">
+      <h1>
+        GPA Calculator
+      </h1>
+      <form>
+        <div class="matkul">
+          <label for="Matkul">Subject:</label>
+          <input type="text" id="Matkul" placeholder="Input Subject" required>
+        </div>
+        <div class="Index">
+          <label for="Index">Index:</label>
+  
+          <input type="text" id="Index" placeholder="Input Index" required>
+          <div class = "dropdown" id = "dropdown">
+            <div > A</div>
+            <div >A-</div>
+            <div >B+</div>
+            <div >B</div>
+            <div >B-</div>
+            <div >C+</div>
+            <div >C</div>
+            <div >D</div>
+            <div >D</div>
+          </div>
+        
+        </div>
+        <div class="SKS">
+          <label for="SKS">Credit:</label>
+          <input type="number" id="SKS" placeholder="Input Credit" required>
+        </div>
+      </form>
+      <button onclick="addSubject()">Add Subject</button>
+      <button onclick="calculateGPA()">See GPA</button>
+      <button onclick="reset()" class="reset" type="reset">Reset</button>
+    </div>
+    <div class="right">
+      <h1 id="gpaResult">
+        Your GPA:
+      </h1>
+      <h3 id="credit">
+        Your Total Credit:
+      </h3>
+      <h4 id="subjectlist">
+        Subject You Took:
+      </h4>
+      <div class="course-list-container">
+          <div id="courseList">
+              </div>
+      </div>
+    </div>
+  </div>
+  <script src ="gpascript.js"></script>
+</body>
+</html>
